@@ -1,0 +1,20 @@
+<title>Архив статей</title>
+<body>
+	<div class="header">
+        <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2017Q2/project-planning-header@2x.png"
+        width = "100">
+    </div>
+    {% for post in posts %}
+		<div class="one-post">
+			<h2 class="post-title">{{ post.title }}</h2>
+			<div class="article-info">
+			<div class="article-author">{{ post.author.username }}</div>
+			<div class="article-created-date">{{ post.created_date }}</div>
+			</div>
+			<p class="article-text">{{ post.get_excerpt }}</p>
+		</div>
+		{% endfor %}
+            
+    </div>
+    </body>
+    
